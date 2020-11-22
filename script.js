@@ -19,7 +19,7 @@ async function fetchCountry() {
   <h4>${item.name} </h4>
   </div>
   
-  <div class="tel"><a href="tel:+234(${item.number.charAt(
+  <div class="phony"><a href="tel:+234(${item.number.charAt(
     0
   )})${item.number.substring(1)}"><button class = "icon"><i class="fa fa-3x fa-phone" ></button></i></a></div>
   
@@ -49,11 +49,14 @@ el("search").addEventListener("keyup", (e) => {
     div.className = "card";
 
     div.innerHTML = `
- <div class= 'text'>
-<h2>${item.name}</h2>
-<h3>Number: ${item.number}</h3>
-
-</div>
+    <div class = "text">
+    <h4>${item.name} </h4>
+    </div>
+    
+    <div class="phony"><a href="tel:+234(${item.number.charAt(
+      0
+    )})${item.number.substring(1)}"><button class = "icon"><i class="fa fa-3x fa-phone" ></button></i></a></div>
+    
 `;
     el("card-holder").append(div); //appends data from the filtered array to card-holder
   });
@@ -66,7 +69,7 @@ function el(item) {
 function phone (){
   function work () {const phoneIcon = document.querySelectorAll(".icon");
   phoneIcon.forEach((icon) => {
-   icon.classList.toggle("shake");
+   icon.classList.toggle("phony-animate");
    
   })
   
@@ -76,11 +79,9 @@ function phone (){
  
  }
 
- 
-
  function searchIcon(){
   function search () {const searchIcon = document.getElementById("search-icon");
-  searchIcon.classList.add("tada");}
+  searchIcon.classList.add("search-animate");}
   
   search()
  }
