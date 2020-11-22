@@ -1,4 +1,4 @@
-setInterval(phone, 3000)
+setInterval(phone, 4000)
 setInterval(searchIcon, 2000)
 
 var filterDataHolder = [];

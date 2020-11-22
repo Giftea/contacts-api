@@ -138,6 +138,7 @@
       width: 40%;
       padding: 20px;
       border-top:none;
+     
     }
 
       .icon{
@@ -150,9 +151,11 @@
 
       .phony-animate{
         animation-name: phony-animate;
-        animation-duration: 2s;
         animation-iteration-count: infinite;
-        animation-timing-function: ease-in;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+       
       }
 
   @-webkit-keyframes search-animate {
