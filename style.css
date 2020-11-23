@@ -350,7 +350,9 @@
 
 
   @media (max-width: 700px) {
-  
+  html{
+    font-size: 55%;
+  }
   
     #card-holder {
       grid-template-columns: 1fr;
